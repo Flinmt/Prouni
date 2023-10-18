@@ -1,6 +1,9 @@
 'use client';
 import menu from "@/assets/menu.svg"
+import arrow from "@/assets/arrow-back.svg"
 import Image from 'next/image'
+import Link from "next/link";
+import exemplo from "@/assets/exemplo.svg"
 
 export default function IaModel() {
     var hide = true;
@@ -32,6 +35,14 @@ export default function IaModel() {
                     />
                 </div>
                 <span className='mr-auto ml-auto'>Modelo de IA</span>
+                <div className='w-7 mr-3 z-20'>
+                    <Link href={'../menu'}>
+                        <Image className='w-full h-full rounded-md cursor-pointer'
+                            src={arrow}
+                            alt="menu"
+                        />
+                    </Link>
+                </div>
             </header>
             <div className="relative flex justify-center items-center h-[81vh]">
                 <div id="sidemenu" className='w-36 md:w-52 h-[90vh] overflow-hidden bg-[#17882C]
@@ -59,8 +70,10 @@ export default function IaModel() {
                         </li>
                     </ul>
                 </div>
-                <div className="borde w-full h-4/5 justify-center items-center text-center">
-                        <div>Local para a IA</div>
+                <div className="w-full h-4/5 flex justify-center items-center text-center">
+                        <div className=" w-full h-full">
+                            <Image src={exemplo} alt={"exemplo"} className=" w-full h-full"/>
+                        </div>
                 </div>
             </div>
         </main>

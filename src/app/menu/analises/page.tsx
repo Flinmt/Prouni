@@ -1,6 +1,10 @@
 'use client';
 import menu from "@/assets/menu.svg"
+import arrow from "@/assets/arrow-back.svg"
 import Image from 'next/image'
+import Link from "next/link";
+import T1 from "@/assets/T1 (1).svg"
+import T2 from "@/assets/T1 (2).svg"
 
 export default function Analises() {
     var hide = true;
@@ -32,6 +36,14 @@ export default function Analises() {
                     />
                 </div>
                 <span className='mr-auto ml-auto'>Análise Exploratória de Dados</span>
+                <div className='w-7 mr-3 z-20'>
+                    <Link href={'../menu'}>
+                        <Image className='w-full h-full rounded-md cursor-pointer'
+                            src={arrow}
+                            alt="menu"
+                        />
+                    </Link>
+                </div>
             </header>
             <div className="relative flex justify-center items-center h-[81vh]">
                 <div id="sidemenu" className='w-36 md:w-52 h-[90vh] overflow-hidden bg-[#17882C]
@@ -60,7 +72,10 @@ export default function Analises() {
                     </ul>
                 </div>
                 <div className="borde w-full h-4/5 justify-center items-center text-center">
-                        <div>Local para os diagramas</div>
+                    <div className=" w-full h-full flex justify-center items-center">
+                        <Image src={T1} alt={"exemplo"} className="h-full" />
+                        <Image src={T2} alt={"exemplo"} className="h-full" />
+                    </div>
                 </div>
             </div>
         </main>
