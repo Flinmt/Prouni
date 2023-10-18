@@ -53,19 +53,16 @@ export default function Analises() {
                             Gráfico de Pizza
                         </li>
                         <li className="w-full h-20 border-white border-t-2 flex justify-center items-center text-white">
-                            Gráfico de Pizza
+                            Gráficos de Boxplot
                         </li>
                         <li className="w-full h-20 border-white border-t-2 flex justify-center items-center text-white">
-                            Gráfico de Pizza
+                            Gráfico de Scatter
                         </li>
                         <li className="w-full h-20 border-white border-t-2 flex justify-center items-center text-white">
-                            Gráfico de Pizza
+                            Gráfico de Violin Plot
                         </li>
                         <li className="w-full h-20 border-white border-t-2 flex justify-center items-center text-white">
-                            Gráfico de Pizza
-                        </li>
-                        <li className="w-full h-20 border-white border-t-2 flex justify-center items-center text-white">
-                            Gráfico de Pizza
+                            Gráfico de Histograma
                         </li>
                         <li className="w-full h-20 border-white border-t-2 flex justify-center items-center text-white">
                         </li>
