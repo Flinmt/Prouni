@@ -68,10 +68,12 @@ export default function Analises() {
                         </li>
                     </ul>
                 </div>
-                <div className="borde w-full h-4/5 justify-center items-center text-center">
-                    <div className=" w-full h-full flex justify-center items-center">
-                        <Image src={T1} alt={"exemplo"} className="h-full" />
-                        <Image src={T2} alt={"exemplo"} className="h-full" />
+                <div className="borde w-screen h-4/5 justify-center items-center text-center flex max-sm:flex-col">
+                    <div className="max-sm:w-full max-sm:h-2/4 w-2/4 h-full flex justify-center items-center">
+                        <Image src={T1} alt={""} className="w-full h-full"/>
+                    </div>
+                    <div className="max-sm:w-full max-sm:h-2/4 w-2/4 h-full flex justify-center items-center">
+                        <Image src={T2} alt={""} className="w-full h-full"/>
                     </div>
                 </div>
             </div>
