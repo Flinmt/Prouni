@@ -45,8 +45,8 @@ export default function Analises() {
                     </Link>
                 </div>
             </header>
-            <div className="relative flex justify-center items-center h-[81vh]">
-                <div id="sidemenu" className='w-36 md:w-52 h-full overflow-hidden bg-[#17882C]
+            <div className="relative flex justify-center items-center h-[88vh]">
+                <div id="sidemenu" className='w-52 h-full overflow-hidden bg-[#17882C]
                 -translate-x-full transition duration-300 ease-in-out absolute left-0 top-0'>
                     <ul className="w-full h-full flex flex-col">
                         <li className="w-full h-20 border-white border-t-2 flex justify-center items-center text-white">
