@@ -7,6 +7,10 @@ const nextConfig = {
                 source: '/api/:path*',
                 destination: `${API_URL}/:path*/`,
             },
+            {
+                source: '/user/:path*',
+                destination: `${API_URL}/:path*`,
+            },
         ]
     },
 }

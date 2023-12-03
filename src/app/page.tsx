@@ -11,7 +11,6 @@ import { hasCookie } from 'cookies-next';
 export default function Home() {
   const router = useRouter();
 
-
   if (hasCookie('login') == true) {
     router.push("/menu")
   }

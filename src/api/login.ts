@@ -1,6 +1,6 @@
 import React from 'react';
 import axios from 'axios';
-import { getCookie, hasCookie, setCookie } from 'cookies-next';
+import { hasCookie, setCookie } from 'cookies-next';
 
 export async function loginUser(event: React.FormEvent<HTMLFormElement>) {
     event.preventDefault();
@@ -15,7 +15,6 @@ export async function loginUser(event: React.FormEvent<HTMLFormElement>) {
     };
 
     try {
-      // Altere a URL para usar o proxy
       const response = await axios.post('/api/login/', userData);
       const tokens = response.data.tokens;
       console.log('Tokens: ', tokens);
