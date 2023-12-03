@@ -1,13 +1,21 @@
+'use client'
+
 import Mec from '@/assets/mec.svg'
 import Image from 'next/image'
 import { HeaderOne } from '@/components/Header'
 import Link from 'next/link'
+import { deleteCookie } from 'cookies-next'
 
 export default function Menu() {
+
+  function logout() {
+    deleteCookie('login');
+  }
+
   return (
     <main>
       <HeaderOne />
-      <div className='w-full fixed inset-0 flex flex-col justify-center items-center'>
+      <div className='w-full fixed inset-0 flex flex-col justify-center items-center' >
         <div className='w-36 h-36 rounded-md mb-7'>
           <Image className='w-full h-full rounded-md'
             src={Mec}
@@ -19,7 +27,7 @@ export default function Menu() {
             hover:shadow-inner flex justify-center items-center text-center'>Análise Exploratória de Dados</Link>
           <Link href="menu/iamodel" className='bg-[#D9D9D9] rounded-lg shadow-md shadow-[#07070763] w-72 h-11 mb-5
             hover:shadow-inner flex justify-center items-center text-center'>Modelo de IA</Link>
-          <Link href=".." className='bg-[#D9D9D9] rounded-lg shadow-md shadow-[#07070763] w-72 h-11 
+          <Link type='button' onClick={logout} href=".." className='bg-[#D9D9D9] rounded-lg shadow-md shadow-[#07070763] w-72 h-11 
             hover:shadow-inner flex justify-center items-center text-center'>Logout</Link>
         </div>
       </div>
