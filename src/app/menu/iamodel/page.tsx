@@ -65,6 +65,7 @@ export default function Resultado() {
       const data = await getUser();
       const result = await getResultado();
 
+
       setUserData(data);
       setUserResult(result);
     }
@@ -93,7 +94,11 @@ export default function Resultado() {
                     ['nome']}</span>
                     <span className="text-sm mb-2"><b>Curso:</b> {userData['nome_curso']}</span>
                     <br />
+                    {userResult ? (
                     <span className="mb-3 font-semibold text-xl">{userResult['resultado']}</span>
+                ) : (
+                    <span className="mb-3 font-semibold text-xl">Resultado não disponível</span>
+                )}
                 </div>
             </div>
         </main>
