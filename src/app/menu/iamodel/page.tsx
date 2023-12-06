@@ -10,7 +10,7 @@ import { useEffect, useState } from "react";
 import spinner from "@/assets/Spinner-1s-200px.gif"
 
 export default function Resultado() {
-    const router = useRouter();
+  const router = useRouter();
   if (!hasCookie('login')) {
     router.push("/.")
   }
@@ -26,16 +26,16 @@ export default function Resultado() {
   const getResultado = async () => {
 
     try {
-        const response = await axios.post('/user/user/create/resultado/' + decoded.user_id, null, {
-            headers: {
-              Authorization: `Bearer ${token}`
-            }
-          });
+      const response = await axios.post('/user/user/create/resultado/' + decoded.user_id, null, {
+        headers: {
+          Authorization: `Bearer ${token}`
+        }
+      });
 
-        console.log(response)
-        return response.data
-    } catch (error){
-        console.log(error)
+      console.log(response)
+      return response.data
+    } catch (error) {
+      console.log(error)
     }
 
   }
@@ -80,27 +80,27 @@ export default function Resultado() {
     </div>;
   }
 
-    return (
-        <main>
-            <HeaderIa/>
-            <div className="relative flex flex-col justify-center items-start h-[81vh] w-[75vw]
+  return (
+    <main>
+      <HeaderIa />
+      <div className="relative flex flex-col justify-center items-start h-[81vh] w-[75vw]
             mx-auto">
-                <div className="flex flex-col mb-14">
-                    <span className="mb-3 font-semibold text-xl">Resultado da IA</span>
-                    <span className="text-sm">Baseado nos resultados Prouni 2017</span>
-                </div>
-                <div className="w-full shadow-md shadow-[#07070763] rounded-lg p-8 flex flex-col">
-                    <span className="text-sm mb-2"><b>Nome:</b> {userData
-                    ['nome']}</span>
-                    <span className="text-sm mb-2"><b>Curso:</b> {userData['nome_curso']}</span>
-                    <br />
-                    {userResult ? (
-                    <span className="mb-3 font-semibold text-xl">{userResult['resultado']}</span>
-                ) : (
-                    <span className="mb-3 font-semibold text-xl">Resultado não disponível</span>
-                )}
-                </div>
-            </div>
-        </main>
-    )
+        <div className="flex flex-col mb-14">
+          <span className="mb-3 font-semibold text-xl">Resultado da IA</span>
+          <span className="text-sm">Baseado nos resultados Prouni 2017</span>
+        </div>
+        <div className="w-full shadow-md shadow-[#07070763] rounded-lg p-8 flex flex-col">
+          <span className="text-sm mb-2"><b>Nome:</b> {userData
+          ['nome']}</span>
+          <span className="text-sm mb-2"><b>Curso:</b> {userData['nome_curso']}</span>
+          <br />
+          {userResult ? (
+            <span className="mb-3 font-semibold text-xl">{userResult['resultado']}</span>
+          ) : (
+            <span className="mb-3 font-semibold text-xl">Resultado não disponível</span>
+          )}
+        </div>
+      </div>
+    </main>
+  )
 }
