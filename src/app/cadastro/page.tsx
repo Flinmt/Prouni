@@ -99,7 +99,7 @@ export default function Home() {
                 <option value="Centro-Oeste">Centro-Oeste</option>
               </select>
             </label>
-            <input required type="text" placeholder='IES: ' className='bg-[#D9D9D9] mb-5 w-full h-11 rounded-lg shadow-mdshadow-[#07070763] border-0 py-1.5 pl-7 pr-20 text-black font-medium ring-inset ring-gray-300 placeholder:text-[#000000a1] placeholder:font-medium sm:text-sm sm:leading-6 placeholder="0.00"' />
+            <input required type="text" placeholder='Universidade: ' className='bg-[#D9D9D9] mb-5 w-full h-11 rounded-lg shadow-mdshadow-[#07070763] border-0 py-1.5 pl-7 pr-20 text-black font-medium ring-inset ring-gray-300 placeholder:text-[#000000a1] placeholder:font-medium sm:text-sm sm:leading-6 placeholder="0.00"' />
             <input required type="text" placeholder='Modalidade: ' className='bg-[#D9D9D9] mb-5 w-full h-11 rounded-lg shadow-mdshadow-[#07070763] border-0 py-1.5 pl-7 pr-20 text-black font-medium ring-inset ring-gray-300 placeholder:text-[#000000a1] placeholder:font-medium sm:text-sm sm:leading-6 placeholder="0.00"' />
             <input required type="text" placeholder='Curso: ' className='bg-[#D9D9D9] mb-5 w-full h-11 rounded-lg shadow-mdshadow-[#07070763] border-0 py-1.5 pl-7 pr-20 text-black font-medium ring-inset ring-gray-300 placeholder:text-[#000000a1] placeholder:font-medium sm:text-sm sm:leading-6 placeholder="0.00"' />
             <input required type="text" placeholder='Turno: ' className='bg-[#D9D9D9] mb-5 w-full h-11 rounded-lg shadow-mdshadow-[#07070763] border-0 py-1.5 pl-7 pr-20 text-black font-medium ring-inset ring-gray-300 placeholder:text-[#000000a1] placeholder:font-medium sm:text-sm sm:leading-6 placeholder="0.00"' />
