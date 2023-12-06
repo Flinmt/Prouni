@@ -6,8 +6,7 @@ export function HeaderIa() {
     return (
         <header className="w-full h-16 bg-[#17882C] flex justify-center items-center 
             text-center text-white">
-                <span className='mr-auto ml-auto'>Modelo de IA</span>
-                <div className='w-7 mr-3'>
+                <div className='w-7 ml-3'>
                     <Link href={'./'}>
                         <Image className='w-full h-full rounded-md cursor-pointer'
                             src={arrow}
@@ -15,6 +14,7 @@ export function HeaderIa() {
                         />
                     </Link>
                 </div>
+                <span className='mr-auto ml-auto'>Modelo de IA</span>
             </header>
     )
 }

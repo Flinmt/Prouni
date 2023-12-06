@@ -8,10 +8,14 @@ import React, { useState, useEffect } from 'react';
 import { jwtDecode } from 'jwt-decode';
 import { deleteCookie, getCookie, hasCookie } from "cookies-next";
 import { useRouter } from "next/navigation";
+import spinner from "@/assets/Spinner-1s-200px.gif"
 
 export default function Home() {
 
+  const [atualizacaoRealizado, setAtualizacaoRealizado] = useState('');
   const router = useRouter();
+  const token = getCookie('login');
+
   if (!hasCookie('login')) {
     router.push("/.")
   }
@@ -21,10 +25,8 @@ export default function Home() {
     // inclua aqui outras propriedades do seu token
   }
 
-  const token = getCookie('login');
-  const decoded = jwtDecode(token as string) as MyTokenPayload;
-
   const getUser = async () => {
+    const decoded = jwtDecode(token as string) as MyTokenPayload;
 
     try {
       const response = await axios.get('/user/user/' + decoded.user_id, {
@@ -53,12 +55,16 @@ export default function Home() {
   }, []);
 
   if (!userData) {
-    return <div>Carregando...</div>;
+    return <div className="absolute -translate-x-2/4 -translate-y-2/4 top-2/4
+     left-2/4">
+      <Image src={spinner} alt={"spinner"}></Image>
+    </div>;
   }
 
 
   const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
+    const decoded = jwtDecode(token as string) as MyTokenPayload;
 
     const form = event.target as HTMLFormElement;
     const nome = (form.elements[0] as HTMLInputElement).value;
@@ -96,14 +102,15 @@ export default function Home() {
         }
       });
 
-      console.log(response)
-
+      setAtualizacaoRealizado('Perfil Atualizado com Sucesso!');
     } catch (error) {
       console.error(error);
     }
   };
 
   const handleDelete = async () => {
+    const decoded = jwtDecode(token as string) as MyTokenPayload;
+
     try {
       const response = await axios.delete('/user/user/delete/' + decoded.user_id, {
         headers: {
@@ -124,7 +131,7 @@ export default function Home() {
     <main>
       <header className="w-full h-16 bg-[#17882C] flex justify-center items-center 
             text-center text-white">
-        <div className='w-7 ml-3 mr-auto z-10'>
+        <div className='w-7 ml-3 z-10'>
           <Link href={'./'}>
             <Image className='w-full h-full rounded-md cursor-pointer'
               src={arrow}
@@ -132,6 +139,7 @@ export default function Home() {
             />
           </Link>
         </div>
+        <span className='mr-auto ml-auto'>{atualizacaoRealizado}</span>
       </header>
       <div className='w-full fixed inset-0 flex flex-col justify-center items-center'>
         <div className='flex flex-col justify-center items-center overflow-auto h-3/4 w-4/5'>

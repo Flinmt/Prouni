@@ -35,7 +35,7 @@ export default function Menu() {
           <Link href="menu/analises" className='bg-[#D9D9D9] rounded-lg shadow-md shadow-[#07070763] w-72 h-11 mb-5
             hover:shadow-inner flex justify-center items-center text-center'>Análise Exploratória de Dados</Link>
           <Link href="menu/iamodel" className='bg-[#D9D9D9] rounded-lg shadow-md shadow-[#07070763] w-72 h-11 mb-5
-            hover:shadow-inner flex justify-center items-center text-center'>Modelo de IA</Link>
+            hover:shadow-inner flex justify-center items-center text-center'>Gerar Resuldade da IA</Link>
           <Link type='button' onClick={logout} href=".." className='bg-[#D9D9D9] rounded-lg shadow-md shadow-[#07070763] w-72 h-11 
             hover:shadow-inner flex justify-center items-center text-center'>Logout</Link>
         </div>
